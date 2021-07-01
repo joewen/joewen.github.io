@@ -9,13 +9,15 @@
             var url = new URL(window.location.href.replace("#", "?"));
             var token = url.searchParams.get("access_token");
             window.location = "csdriver://connection/gdrive/" + token
+
+            document.getElementById("text").innerText = token;
         }
         window.onload = load;
     </script>
 </head>
 
 <body>
-
+    <div id="text"></div>
 
 </body>
 
