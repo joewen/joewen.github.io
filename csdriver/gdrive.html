@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript">
+        function load() {
+            var url = new URL(window.location.href.replace("#", "?"));
+            var token = url.searchParams.get("access_token");
+            window.location = "csdriver://connection/gdrive/" + token
+        }
+        window.onload = load;
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>
