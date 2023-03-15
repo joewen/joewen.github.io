@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The title</title>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+</head>
+
+<body>
+
+    <input type="button" onclick="test()">
+
+    <script>
+        function test() {
+            liff.init({
+
+                withLoginOnExternalBrowser: true,
+            }).then(() => {
+               let token = liff.getAccessToken();
+               console.log(token);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
