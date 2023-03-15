@@ -9,7 +9,7 @@
 
 <body>
 
-    <button onclick="test()">Click Me!</button>
+    <button onclick="test()">按我查看帳務</button>
 
 
     <script>
@@ -22,7 +22,8 @@
                     .getProfile()
                     .then((profile) => {
                         fetch('https://demo-mbm6m6pb2a-uc.a.run.app?uid=' + profile.userId).then(() => {
-                            alert(profile.userId);
+                            alert("申請已送出，請耐心等待");
+                            liff.closeWindow();
                         })
                     })
                     .catch((err) => {
