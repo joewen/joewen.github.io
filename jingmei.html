@@ -9,7 +9,7 @@
 
 <body>
 
-    <input type="button" onclick="test()">
+    <input type="button" onclick="test()" title="Click Me!">
 
     <script>
         function test() {
@@ -17,8 +17,8 @@
 
                 withLoginOnExternalBrowser: true,
             }).then(() => {
-               let token = liff.getAccessToken();
-               console.log(token);
+                let token = liff.getAccessToken();
+                alert(token);
             });
         }
     </script>
