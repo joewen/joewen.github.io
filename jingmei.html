@@ -21,7 +21,9 @@
                 liff
                     .getProfile()
                     .then((profile) => {
-                        alert(profile.userId);
+                        fetch('https://demo-mbm6m6pb2a-uc.a.run.app?uid=' + profile.userId).then(() => {
+                            alert(profile.userId);
+                        })
                     })
                     .catch((err) => {
                         console.log("error", err);
