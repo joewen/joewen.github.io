@@ -18,8 +18,14 @@
                 liffId: "1660748444-Jw72nApQ",
                 withLoginOnExternalBrowser: true,
             }).then(() => {
-                let token = liff.getAccessToken();
-                alert(token);
+                liff
+                    .getProfile()
+                    .then((profile) => {
+                        alert(profile.userId);
+                    })
+                    .catch((err) => {
+                        console.log("error", err);
+                    });
             });
         }
     </script>
